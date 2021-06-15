@@ -6,7 +6,8 @@ const port = 8081;
 app.set('view engine', 'pug')
 
 app.get('/', (req, res) => {
-    res.send('Ahhh suhhhh from Express!')
+    console.log(req)
+    res.render('home', {method: 'get', path: 'some', randomNumber:'thing'})
 })
 
 app.all('*', (req, res) => {
