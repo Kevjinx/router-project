@@ -16,6 +16,18 @@ app.get(/(xyz)$/, (req,res) => {
 });
 
 
+app.get(/(capital-letters)/, (req, res) => {
+    const letters = req.url
+    const capLetters = letters.split('/capital-letters/')[1].toUpperCase()
+    res.send(capLetters)
+})
+
+
+
+
+
+
+
 
 
 
